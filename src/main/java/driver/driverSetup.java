@@ -14,7 +14,7 @@ public class driverSetup {
     WebDriver driver;
     Properties p = new Properties();
 
-    public void setUp() {
+    public WebDriver setUp() {
         FileInputStream loc = null;
         try {
             loc = new FileInputStream("/Users/mesropandranikyan1/Desktop/myProject/properties");
@@ -35,5 +35,6 @@ public class driverSetup {
             System.setProperty("webdriver.gecko.driver", "/Users/mesropandranikyan1/Desktop/myProject/driver/geckodriver");
             driver = new FirefoxDriver();
         }
+        return driver;
     }
 }
